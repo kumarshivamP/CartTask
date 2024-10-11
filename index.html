@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./index.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+    <title>Screening Task</title>
+</head>
+
+<body>
+    <div class="container">
+        <header class="collapse-content">
+            <span class="line">
+                <hr />
+            </span>
+            <h2 class="main-heading column">YAY! It’s BOGO</h2>
+            <span class="line">
+                <hr />
+            </span>
+        </header>
+        <main class="product-card">
+            <label class="collapse-content">
+                <input type="radio" name="product" value="product-1">
+                <div class="space-between">
+                    <div class="column">
+                        <span class="bold">1 Unit <span class="percentage"> 10% Off</span></span>
+                        <span class="secondary-text">Standard Price</span>
+                    </div>
+                    <div class="column"></div>
+                    <div class="column end">
+                        <span class="bold">$10.00 USD </span>
+                        <span class="cutted">$24.00 USD</span>
+                    </div>
+                </div>
+            </label>
+            <div class="expand">
+                <h3>Size Options</h3>
+                <div class="size-options">
+                    <label>
+                        <input type="radio" name="size" value="small">
+                        Small
+                    </label>
+                    <label>
+                        <input type="radio" name="size" value="medium">
+                        Medium
+                    </label>
+                    <label>
+                        <input type="radio" name="size" value="large">
+                        Large
+                    </label>
+                </div>
+                <h3>Color Options</h3>
+                <div class="color-options">
+                    <label>
+                        <input type="radio" name="color" value="red">
+                        Red
+                    </label>
+                    <label>
+                        <input type="radio" name="color" value="blue">
+                        Blue
+                    </label>
+                    <label>
+                        <input type="radio" name="color" value="green">
+                        Green
+                    </label>
+                </div>
+            </div>
+            <!-- <button class="collapse">Collapse</button> -->
+        </main>
+        <!-- <div class="product-card most-popular">
+            <label>
+                <input type="radio" name="product" value="product-2">
+                Product 2
+            </label>
+            <div class="expand">
+                <h3>Size Options</h3>
+                <div class="size-options">
+                    <label>
+                        <input type="radio" name="size" value="small">
+                        Small
+                    </label>
+                    <label>
+                        <input type="radio" name="size" value="medium">
+                        Medium
+                    </label>
+                    <label>
+                        <input type="radio" name="size" value="large">
+                        Large
+                    </label>
+                </div>
+                <h3>Color Options</h3>
+                <div class="color-options">
+                    <label>
+                        <input type="radio" name="color" value="red">
+                        Red
+                    </label>
+                    <label>
+                        <input type="radio" name="color" value="blue">
+                        Blue
+                    </label>
+                    <label>
+                        <input type="radio" name="color" value="green">
+                        Green
+                    </label>
+                </div>
+            </div>
+            <button class="collapse">Collapse</button>
+        </div>
+        <div class="product-card">
+            <label>
+                <input type="radio" name="product" value="product-3">
+                Product 3
+            </label>
+            <div class="expand">
+                <h3>Size Options</h3>
+                <div class="size-options">
+                    <label>
+                        <input type="radio" name="size" value="small">
+                        Small
+                    </label>
+                    <label>
+                        <input type="radio" name="size" value="medium">
+                        Medium
+                    </label>
+                    <label>
+                        <input type="radio" name="size" value="large">
+                        Large
+                    </label>
+                </div>
+                <h3>Color Options</h3>
+                <div class="color-options">
+                    <label>
+                        <input type="radio" name="color" value="red">
+                        Red
+                    </label>
+                    <label>
+                        <input type="radio" name="color" value="blue">
+                        Blue
+                    </label>
+                    <label>
+                        <input type="radio" name="color" value="green">
+                        Green
+                    </label>
+                </div>
+            </div>
+            <button class="collapse">Collapse</button>
+        </div> -->
+        <footer>
+            <div class="between">
+                <span class="bold pink">Free Delivery</span>
+                <span class="bold">Total: $18.00 USD</span>
+            </div>
+            <div>
+                <button><i class="fas fa-plus"></i>Add to Cart</button>
+            </div>
+            <div class="author">
+                @ Powered by Pumper
+            </div>
+        </footer>
+    </div>
+
+    <script>
+        const productCards = document.querySelectorAll('.product-card');
+
+        productCards.forEach((card) => {
+            card.addEventListener('click', () => {
+                card.classList.toggle('expanded');
+            });
+        });
+    </script>
+</body>
+
+</html>
