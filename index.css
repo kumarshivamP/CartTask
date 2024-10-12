@@ -36,6 +36,7 @@ h2 {
 }
 
 .product-card {
+    position: relative;
     padding: 20px;
     margin-bottom: 20px;
     border: 1px solid #C8C8C8;
@@ -84,7 +85,22 @@ h2 {
 }
 
 .product-card.most-popular {
-    background-color: #f9f9f9;
+    background-color: #FFF9FA;
+}
+
+.extra-space {
+    margin-top: 5px;
+}
+
+.badge {
+    position: absolute;
+    top: -5px;
+    right: 10px;
+    background-color: #FF6B82;
+    color: white;
+    font-size: 12px;
+    padding: 5px;
+    border-radius: 0px 0px 6px 6px;
 }
 
 .product-card label {
@@ -114,34 +130,21 @@ h2 {
     /* change to your desired color */
 }
 
-.product-card .size-options {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
+.details {
+    display: grid;
+    margin: 0px 45px;
+    column-gap: 15px;
+    row-gap: 8px;
+    grid-template-columns: 20px 80px 80px;
+    font-size: 14px;
+    align-items: center;
 }
 
-.product-card .size-options label {
-    flex-basis: calc(50% - 10px);
-}
-
-.product-card .size-options input[type="radio"] {
-    width: 20px;
-    height: 20px;
-}
-
-.product-card .color-options {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
-}
-
-.product-card .color-options label {
-    flex-basis: calc(50% - 10px);
-}
-
-.product-card .color-options input[type="radio"] {
-    width: 20px;
-    height: 20px;
+.details select {
+    padding: 4px 8px;
+    border: 1px solid #D9D9D9;
+    border-radius: 2px;
+    font-size: 16px;
 }
 
 .product-card .expand {
@@ -149,7 +152,8 @@ h2 {
 }
 
 .product-card.expanded .expand {
-    display: block;
+    display: grid;
+    /* border: 2px solid #FF6B82; */
 }
 
 .product-card.expanded .collapse {
@@ -171,7 +175,7 @@ button {
     border: none;
 }
 
-.author{
+.author {
     display: flex;
     justify-content: end;
     color: #00000066;
@@ -179,11 +183,13 @@ button {
     font-weight: 400;
     font-style: italic;
 }
-.between{
+
+.between {
     display: flex;
     justify-content: space-between;
     margin-bottom: 12px;
 }
+
 .pink {
     color: #FF6B82;
 }
