@@ -30,7 +30,7 @@
                     </div>
                     <div class="column"></div>
                     <div class="column end">
-                        <span class="bold">$10.00 USD </span>
+                        <span class="bold price">$10.00 USD </span>
                         <span class="cutted">$24.00 USD</span>
                     </div>
                 </div>
@@ -64,7 +64,7 @@
                     </div>
                     <div class="column"></div>
                     <div class="column end">
-                        <span class="bold">$18.00 USD </span>
+                        <span class="bold price">$18.00 USD </span>
                         <span class="cutted">$24.00 USD</span>
                     </div>
                 </div>
@@ -110,7 +110,7 @@
                     </div>
                     <div class="column"></div>
                     <div class="column end">
-                        <span class="bold">$24.00 USD </span>
+                        <span class="bold price">$24.00 USD </span>
                         <span class="cutted">$24.00 USD</span>
                     </div>
                 </div>
@@ -159,7 +159,7 @@
         <footer>
             <div class="between">
                 <span class="bold pink">Free Delivery</span>
-                <span class="bold">Total: $18.00 USD</span>
+                <span class="bold" id="total">Total: $00.00 USD</span>
             </div>
             <div>
                 <button><i class="fas fa-plus"></i>Add to Cart</button>
@@ -172,10 +172,37 @@
 
     <script>
         const productCards = document.querySelectorAll('.product-card');
+        const totalPriceElement = document.querySelector('#total');
 
         productCards.forEach((card) => {
-            card.addEventListener('click', () => {
+            card.addEventListener('click', (event) => {
+                // Collapse all other product cards
+                productCards.forEach((otherCard) => {
+                    if (otherCard !== card) {
+                        otherCard.classList.remove('expanded');
+                    }
+                });
+
+                // Toggle the current product card
                 card.classList.toggle('expanded');
+            });
+
+            // Add event listener to select tags to prevent collapse
+            const selectTags = card.querySelectorAll('select');
+            selectTags.forEach((select) => {
+                select.addEventListener('click', (event) => {
+                    event.stopPropagation();
+                });
+            });
+
+            // Add event listener to radio buttons to update total price
+            const radioButton = card.querySelector('input[type="radio"]');
+            radioButton.addEventListener('change', (event) => {
+                if (event.target.checked) {
+                    const priceElement = card.querySelector('.price');
+                    const price = priceElement.textContent;
+                    totalPriceElement.textContent = `Total: ${price}`;
+                }
             });
         });
     </script>
