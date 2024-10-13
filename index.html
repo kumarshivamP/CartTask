@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./index.css">
+    <link rel="stylesheet" media="screen and (max-width: 558px)" href="./phone.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
     <title>Screening Task</title>
 </head>
@@ -28,7 +29,7 @@
                         <span class="bold">1 Unit <span class="percentage"> 10% Off</span></span>
                         <span class="secondary-text">Standard Price</span>
                     </div>
-                    <div class="column"></div>
+                    <div class="column empty"></div>
                     <div class="column end">
                         <span class="bold price">$10.00 USD </span>
                         <span class="cutted">$24.00 USD</span>
@@ -62,7 +63,7 @@
                         <span class="bold">2 Unit <span class="percentage"> 20% Off</span></span>
                         <span class="secondary-text">Standard Price</span>
                     </div>
-                    <div class="column"></div>
+                    <div class="column empty"></div>
                     <div class="column end">
                         <span class="bold price">$18.00 USD </span>
                         <span class="cutted">$24.00 USD</span>
@@ -108,7 +109,7 @@
                         <span class="bold">3 Unit <span class="percentage"> 30% Off</span></span>
                         <span class="secondary-text">Standard Price</span>
                     </div>
-                    <div class="column"></div>
+                    <div class="column empty"></div>
                     <div class="column end">
                         <span class="bold price">$24.00 USD </span>
                         <span class="cutted">$24.00 USD</span>
@@ -184,7 +185,7 @@
                 });
 
                 // Toggle the current product card
-                card.classList.toggle('expanded');
+                card.classList.add('expanded');
             });
 
             // Add event listener to select tags to prevent collapse

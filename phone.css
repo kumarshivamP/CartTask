@@ -1,0 +1,95 @@
+.container {
+    margin: 20px auto;
+    padding: 15px 20px;
+}
+
+.main-heading {
+    font-size: 20px;
+}
+
+.product-card {
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+.secondary-text {
+    font-size: 12px;
+}
+
+.bold {
+    font-size: 14px;
+}
+
+.space-between {
+    margin: 0px 4px;
+}
+
+.cutted {
+    font-size: 11px;
+}
+
+.percentage {
+    padding: 1px 3px;
+    font-size: 12px;
+}
+
+.column.empty {
+    flex: 0.5;
+}
+
+.badge {
+    position: absolute;
+    top: -5.5px;
+    right: 10px;
+    background-color: #FF6B82;
+    color: white;
+    font-size: 10px;
+    padding: 3px 5px;
+    border-radius: 0px 0px 3px 3px;
+}
+
+
+.badge::before {
+    left: -6px;
+    bottom: 11px;
+    border-width: 0px 0px 6px 7px;
+}
+
+.badge::after {
+    right: -6px;
+    bottom: 11px;
+    border-width: 0px 7px 6px 0px;
+}
+
+.product-card label {
+    gap: 5px;
+    margin-bottom: 5px;
+}
+
+input[type="radio"] {
+    transform: scale(1);
+}
+
+.details {
+    margin: 0px 25px;
+    column-gap: 10px;
+    row-gap: 6px;
+    grid-template-columns: 10px 60px 70px;
+    font-size: 12px;
+}
+.details select {
+    padding: 2px 4px;
+    border-radius: 1px;
+    font-size: 13px;
+}
+button {
+    padding: 6px 0px;
+    font-size: 13px;
+    border-radius: 3px;
+    gap: 6px;
+}
+
+.author {
+    font-size: 12px;
+    margin-top: 4px;
+}

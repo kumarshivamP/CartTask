@@ -20,7 +20,6 @@ body {
 
 hr {
     border: 1px solid #C8C8C8;
-    ;
 }
 
 .main-heading {
@@ -130,10 +129,6 @@ h2 {
     gap: 10px;
     margin-bottom: 10px;
 }
-
-/* input[type="radio"] {
-    accent-color: #33f31e; 
-  } */
 
   input[type="radio"] {
     accent-color: #fb4661; 
